@@ -31,7 +31,6 @@ describe('Employee', () => {
 
           const testEmpTwo = new Employee({ firstName: 'Amanda', lastName: 'Nue', idDepartment: testDepOne, salary: 7500});
           await testEmpTwo.save();
-          console.log(testEmpTwo);
         });
 
         it('should return all the data with "find" method', async () => {
@@ -56,6 +55,7 @@ describe('Employee', () => {
 
         after(async () => {
             await Employee.deleteMany();
+            await Department.deleteMany();
         });
     });
 
