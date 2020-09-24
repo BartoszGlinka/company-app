@@ -8,6 +8,4 @@ const employeeSchema = new mongoose.Schema({
     salary: { type: Number, required: true }
 });
 
-mongoose.model('Employee', employeeSchema);
-
 module.exports = mongoose.model('Employee', employeeSchema);
